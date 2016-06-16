@@ -55,7 +55,7 @@ public class UsersResource {
 		if (userId == null) {
 			return Response
 					.status(Response.Status.BAD_REQUEST)
-					.entity("{\"error\": \"Empty userId\", \'status\": \"FAIL\"}")
+					.entity("{\"error\": \"Empty userId\", \"status\": \"FAIL\"}")
 					.build();
 		}
 
@@ -69,7 +69,7 @@ public class UsersResource {
 
 		return Response
 				.status(Response.Status.BAD_REQUEST)
-				.entity("{\"error\": \"Could Not Find User\", \'status\": \"FAIL\"}")
+				.entity("{\"error\": \"Could Not Find User\", \"status\": \"FAIL\"}")
 				.build();
 	}
 
@@ -98,7 +98,7 @@ public class UsersResource {
 
 		return Response
 				.status(Response.Status.BAD_REQUEST)
-				.entity("{\"error\": \"Could Not Find User\", \'status\": \"FAIL\"}")
+				.entity("{\"error\": \"Could Not Find User\", \"status\": \"FAIL\"}")
 				.build();
 	}
 
@@ -125,7 +125,7 @@ public class UsersResource {
 
 		return Response
 				.status(Response.Status.BAD_REQUEST)
-				.entity("{\"error\": \"Could Not Create User\", \'status\": \"FAIL\"}")
+				.entity("{\"error\": \"Could Not Create User\", \"status\": \"FAIL\"}")
 				.build();
 
 	}
@@ -161,7 +161,7 @@ public class UsersResource {
 		} catch (Exception e) {
 			return Response
 					.status(Response.Status.BAD_REQUEST)
-					.entity("{\"error\": \"Invalid or Missing fields error\", \'status\": \"FAIL\"}")
+					.entity("{\"error\": \"Invalid or Missing fields error\", \"status\": \"FAIL\"}")
 					.build();
 		}
 
@@ -177,7 +177,7 @@ public class UsersResource {
 
 		return Response
 				.status(Response.Status.BAD_REQUEST)
-				.entity("{\"error\": \"Could Not Update User\", \'status\": \"FAIL\"}")
+				.entity("{\"error\": \"Could Not Update User\", \"status\": \"FAIL\"}")
 				.build();
 
 	}
@@ -203,7 +203,7 @@ public class UsersResource {
 
 		return Response
 				.status(Response.Status.BAD_REQUEST)
-				.entity("{\"error\": \"Could Not Delete User\", \'status\": \"FAIL\"}")
+				.entity("{\"error\": \"Could Not Delete User\", \"status\": \"FAIL\"}")
 				.build();
 
 	}

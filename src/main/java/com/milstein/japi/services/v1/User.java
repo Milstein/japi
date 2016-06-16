@@ -5,7 +5,14 @@ import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
+import com.milstein.japi.UserDAO;
+
 @XmlRootElement(name = "user")
+@Entity(value = UserDAO.COLLECTION_NAME, noClassnameStored = true)
 public class User implements Serializable {
 
 	/**
@@ -14,16 +21,17 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@XmlElement(name = "id")
-	private String id;
+	@Id
+	private ObjectId id;
 
 	@XmlElement(name = "name")
 	private String name;
 
-	public String getId() {
+	public ObjectId getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(ObjectId id) {
 		this.id = id;
 	}
 
