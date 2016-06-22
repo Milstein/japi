@@ -33,6 +33,13 @@ public class UsersResource {
 			.getName());
 
 	@GET
+	@Path("/test")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String testService() {
+		return "Welcome to Users Service";
+	}
+
+	@GET
 	@Path("/xx")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String xx() {
